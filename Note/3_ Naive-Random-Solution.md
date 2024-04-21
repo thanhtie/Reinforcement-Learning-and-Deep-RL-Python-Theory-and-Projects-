@@ -6,3 +6,5 @@ PICK and DROP game:
 RULE
 ![image](https://github.com/thanhtie/Reinforcement-Learning-and-Deep-RL-Python-Theory-and-Projects-/assets/92991572/34902574-fee2-4f04-b059-35bbcc189615)
 
+
+CODE: Pick and Drop game
