@@ -51,9 +51,35 @@ Agent reached the goal or dead/loss (dump state).
 
 At each time step, the environment provides feedback to the agent in the form of rewards/punishment. Rewards indicate the desirability of the agent's actions. The goal of the agent is typically to maximize the cumulative reward it receives over time. Rewards can be positive, negative, or zero, depending on the outcome of the agent's actions.
 
-`Policy`: The policy is the strategy or rule that the agent uses to select actions in different states of the environment. It maps states to actions and guides the agent's decision-making process. Policies can be deterministic or stochastic, depending on whether they always choose the same action in a given state or sample actions probabilistically.
+## Policy:
+key component that defines the strategy or rule by which an agent selects actions in different states of the environment. The policy determines the behavior of the agent and guides its decision-making process.Policies can be deterministic or stochastic, depending on whether they always choose the same action in a given state or sample actions probabilistically.
+
+`Decision-making`: At each time step, the agent interacts with the environment by observing its current state and selecting an action based on its policy. The policy maps states to actions and dictates the agent's behavior in different situations.
+
+`Deterministic vs. Stochastic Policies`:
++ Deterministic Policy: A deterministic policy specifies a single action for each state, meaning that the agent always chooses the same action in a given state.
++ Stochastic Policy: A stochastic policy probabilistically selects actions, meaning that the agent's choice of action in a given state is governed by a probability distribution over the action space.
+
+`Exploration vs. Exploitation`: Policies play a crucial role in balancing exploration and exploitation in RL. Exploration involves trying out new actions to discover potentially better strategies, while exploitation involves choosing actions that are known to yield high rewards based on past experience. The policy determines how the agent navigates this trade-off.
+
+`Policy Representation`: Policies can be represented in various forms, depending on the complexity of the environment and the task at hand. Common representations include:
+
++ `Tabular Policy`: For environments with a small, discrete state and action space, policies can be represented as tables or lookup tables that map each state to an action.
+
++ `Function Approximation`: In more complex environments with large state or action spaces, policies can be represented using function approximation techniques, such as neural networks, which take state features as input and output action probabilities or action values.
+
++ `Parameterized Policies`: Some policies are parameterized by a set of parameters, which can be learned from data using optimization methods such as gradient descent.
+
+`Policy Evaluation and Improvement`: RL algorithms typically involve two main steps: policy evaluation and policy improvement.
+
++ `Policy Evaluation`: Given a policy, the agent evaluates its quality by estimating the expected cumulative reward it can achieve when following that policy. This is often done using value functions or directly estimating the expected return.
+
++ `Policy Improvement`: Based on the evaluation, the agent may update its policy to improve its performance. This can be done by selecting actions that are estimated to lead to higher rewards or by directly modifying the parameters of the policy.
+
+`Optimization Objectives`: The goal of RL is often to find an optimal policy that maximizes the cumulative reward obtained over time. Different RL algorithms employ various optimization objectives, such as maximizing the expected return, minimizing the negative loss function, or maximizing the value function, to learn such policies.
 
 `Value Function`: The value function estimates the expected cumulative reward that the agent can achieve from a given state or state-action pair. It helps the agent evaluate the desirability of different states or actions and guides its decision-making process. Value functions can be estimated directly or indirectly through methods like state-value functions (V-function) or action-value functions (Q-function).
 
+`Plan`: collections of policy
 
 
